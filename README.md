@@ -23,26 +23,14 @@
 
 <p align="left">
   <!-- 以下徽章来自 https://simpleicons.org/，你可以替换或增减 -->
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  </a>
-  <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  </a>
-  <a href="https://reactjs.org/" target="_blank">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  </a>
-  <a href="https://vuejs.org/" target="_blank">
-    <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue.js" />
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Java" target="_blank">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Java" />
   </a>
   <a href="https://nodejs.org/" target="_blank">
     <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   </a>
   <a href="https://www.python.org/" target="_blank">
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  </a>
-  <a href="https://www.docker.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   </a>
   <a href="https://git-scm.com/" target="_blank">
     <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />

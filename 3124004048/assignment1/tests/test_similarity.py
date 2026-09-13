@@ -16,8 +16,10 @@ import time
 import unittest
 from collections import Counter
 
+from dupcheck.preprocessor import build_ngrams
 from dupcheck.similarity import (
     DEFAULT_WEIGHTS,
+    _count_ngrams,
     compute_similarity,
     dice_coefficient,
     explain_similarity,
@@ -98,6 +100,11 @@ class ComputeSimilarityTest(unittest.TestCase):
         self.assertEqual(compute_similarity("a", "a"), 1.0)
         self.assertEqual(compute_similarity("a", "b"), 0.0)
 
+    def test_text_shorter_than_trigram_uses_low_order_features(self):
+        # "ab" 与 "ba" 没有共同的三元片段（长度不足），单字却完全相同，
+        # 因此得分应当只由权重 0.10 的 unigram_cosine 贡献
+        self.assertAlmostEqual(compute_similarity("ab", "ba"), 0.10, places=4)
+
     def test_custom_weights_are_used(self):
         score = compute_similarity("abc", "abd", weights={"unigram_cosine": 1.0})
         self.assertAlmostEqual(score, 2.0 / 3.0, places=4)
@@ -122,6 +129,29 @@ class ComputeSimilarityTest(unittest.TestCase):
         self.assertTrue(report["identical"])
         self.assertEqual(report["score"], 1.0)
         self.assertEqual(report["features"], {})
+
+
+class CountNgramsTest(unittest.TestCase):
+    """``_count_ngrams`` 的优化实现必须与直观的参考实现完全等价。
+
+    ``build_ngrams`` 是"照着定义写"的参考实现（可读性优先），
+    ``_count_ngrams`` 是性能优化后的实现（避免 Python 层循环）。
+    两条路径互为验证，保证优化不会悄悄改变结果。
+    """
+
+    def test_matches_reference_implementation(self):
+        text = "软件工程论文查重算法性能优化"
+        for size in (1, 2, 3):
+            with self.subTest(size=size):
+                self.assertEqual(
+                    _count_ngrams(text, size),
+                    Counter(build_ngrams(text, size)),
+                )
+
+    def test_text_shorter_than_size_yields_empty_counter(self):
+        with self.subTest(size=3):
+            self.assertEqual(_count_ngrams("ab", 3), Counter())
+            self.assertEqual(build_ngrams("ab", 3), [])
 
 
 class PerformanceRegressionTest(unittest.TestCase):

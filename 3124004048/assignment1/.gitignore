@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 测试与覆盖率产物
+.coverage
+coverage.json
+.coverage.*
+htmlcov/
+.pytest_cache/
+.coverage_report/

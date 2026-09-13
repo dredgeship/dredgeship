@@ -12,3 +12,15 @@ coverage.json
 htmlcov/
 .pytest_cache/
 .coverage_report/
+
+# 性能分析产物
+*.prof
+profile.out
+profile.*.out
+*.log
+
+# 编辑器与虚拟环境
+.idea/
+.vscode/
+.venv/
+venv/

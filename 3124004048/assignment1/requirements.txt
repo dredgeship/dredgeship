@@ -1,15 +1,27 @@
 # ============================================================
 # 论文查重程序 - Python 依赖清单
 # ------------------------------------------------------------
-# 说明：
-#   程序本体（main.py 及其 dupcheck 包）只使用 Python 标准库，
-#   不需要安装任何第三方包，可直接运行：
+# 【运行程序本体不需要任何第三方包】
+#   main.py 及其 dupcheck 包只使用 Python 标准库，可直接运行：
 #       python main.py <原文文件> <抄袭版论文文件> <答案文件>
+#   测评机器上无需 pip install 任何东西。
 #
-#   下列依赖仅用于执行单元测试、生成覆盖率报告：
-#       python -m pip install -r requirements.txt
-#       python -m coverage run -m unittest discover -s tests -t .
-#       python -m coverage report -m
+# 【下列依赖只用于测试与开发】
+#   python -m pip install -r requirements.txt
+#
+#   1) 单元测试（也可只用标准库：python -m unittest discover -s tests -t .）
+#          python -m pytest tests -q
+#
+#   2) 覆盖率统计（参数已固化在 .coveragerc 中）
+#          python -m coverage run -m unittest discover -s tests -t .
+#          python -m coverage report -m
+#          python -m coverage html
+#
+#   3) 性能分析（可选，安装后可用交互式图表出图；不装也能用
+#      python tools/benchmark.py --svg docs/profile.svg 直接生成 SVG 图）
+#          python -m pip install snakeviz
+#          python tools/benchmark.py --profile --dump profile.out
+#          python -m snakeviz profile.out
 # ============================================================
 
 coverage>=6.5

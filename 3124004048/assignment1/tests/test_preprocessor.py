@@ -38,6 +38,18 @@ class NormalizeTest(unittest.TestCase):
     def test_punctuation_only_returns_empty(self):
         self.assertEqual(normalize("，。！？ \n\t"), "")
 
+    def test_removes_underscore_and_symbols(self):
+        # 下划线属于 \w 但不属于 str.isalnum，"有效字符"的定义必须与后者一致
+        self.assertEqual(normalize("a_b+c=d"), "abcd")
+
+    def test_fullwidth_and_noise_mixed(self):
+        self.assertEqual(normalize("软件工程（２０２３）Ａ班"), "软件工程2023a班")
+
+    def test_combining_mark_from_casefold_is_removed(self):
+        # 'İ'.casefold() 会展开成 'i' + U+0307（组合符号），而组合符号不是有效字符。
+        # 这条用例锁定了"先 casefold 再过滤"的顺序：顺序反了结果就会变成 'i̇'。
+        self.assertEqual(normalize("İ"), "i")
+
 
 class BuildNgramsTest(unittest.TestCase):
     """``build_ngrams`` 的边界验证。"""

@@ -1,0 +1,16 @@
+# ============================================================
+# 论文查重程序 - Python 依赖清单
+# ------------------------------------------------------------
+# 说明：
+#   程序本体（main.py 及其 dupcheck 包）只使用 Python 标准库，
+#   不需要安装任何第三方包，可直接运行：
+#       python main.py <原文文件> <抄袭版论文文件> <答案文件>
+#
+#   下列依赖仅用于执行单元测试、生成覆盖率报告：
+#       python -m pip install -r requirements.txt
+#       python -m coverage run -m unittest discover -s tests -t .
+#       python -m coverage report -m
+# ============================================================
+
+coverage>=6.5
+pytest>=7.0

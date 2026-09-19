@@ -1,0 +1,25 @@
+# 运行产物（题目要求输出到执行程序当前目录）
+Exercises.txt
+Answers.txt
+Grade.txt
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.spec
+
+# 虚拟环境
+.venv/
+venv/
+
+# 性能分析产物
+*.prof
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

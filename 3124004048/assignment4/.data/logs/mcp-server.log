@@ -1,0 +1,340 @@
+2026-10-14 17:20:04,116 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-14 17:20:04,270 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-14 17:20:04,309 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-14 17:20:21,801 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:20:21,853 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-14 17:20:30,990 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:20:42,147 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:20:42,160 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:20:43,804 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 17:20:44,492 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 17:21:03,612 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:03,631 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:04,892 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 17:21:05,989 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 17:21:33,508 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:33,511 | INFO    | storage.repository | 创建任务 #11: 准备课堂演示脚本
+2026-10-14 17:21:33,518 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:33,526 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:35,567 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:47,708 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:21:48,630 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:22:00,878 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:22:00,888 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:22:01,982 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 17:22:02,877 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 17:22:04,620 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:24:17,493 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:24:17,513 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 17:24:18,743 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 17:24:19,661 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 17:24:19,680 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 18:35:32,258 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-14 18:35:32,430 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-14 18:35:32,473 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-14 18:37:43,086 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 18:38:39,819 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 18:38:39,842 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-14 18:38:41,643 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 18:40:32,443 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 18:44:17,351 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-14 18:44:17,524 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-14 18:44:17,563 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-14 18:47:29,131 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-14 18:47:29,296 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-14 18:47:29,335 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-14 19:06:41,277 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-14 19:06:41,411 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-14 19:06:41,444 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-14 19:07:05,135 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:07:18,429 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:07:28,397 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:07:28,411 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:07:28,433 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-14 19:07:29,933 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:07:30,610 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:07:43,303 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:07:44,553 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:08:32,484 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:08:32,516 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:08:33,586 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:08:34,685 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:08:45,029 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:08:45,081 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:08:46,134 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:08:47,079 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:09:02,505 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:08,461 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:12,745 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:13,674 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:14,922 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:15,735 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:16,222 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:16,550 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:16,753 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:16,956 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:28,873 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:34,791 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:36,500 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:36,513 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:37,643 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:09:38,284 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:09:38,294 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:38,308 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:39,361 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:09:40,306 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:09:52,254 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:52,272 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:09:53,377 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:09:54,028 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:10:26,375 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:10:26,390 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:10:27,503 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:10:28,843 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:10:51,846 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:11:23,432 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:12:20,873 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:25,619 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:39,999 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:56,283 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:56,300 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:57,645 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:13:58,323 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-14 19:13:58,744 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:58,758 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-14 19:13:59,891 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-14 19:14:00,841 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-14&end_date=2026-10-14 "HTTP/1.1 200 OK"
+2026-10-16 16:06:49,610 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 16:06:49,782 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:06:49,815 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:07:11,398 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:07:11,430 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 16:12:51,893 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+homework3\.env
+2026-10-16 16:12:35,535 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:12:35,572 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:15:51,337 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 16:15:51,557 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:15:53,918 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:17:43,018 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:17:43,049 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 16:20:09,523 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:16,304 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 16:45:16,586 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:45:16,644 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:45:24,695 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:24,770 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 16:45:24,812 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:27,036 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:27,955 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:30,757 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:30,770 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:30,782 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:32,014 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:32,901 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:32,916 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:32,928 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:34,153 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:34,815 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:34,831 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:34,844 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:36,139 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:37,233 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:37,244 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:37,255 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:38,554 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:39,185 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:39,196 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:39,209 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:40,325 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:42,056 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:42,074 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:42,084 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:43,170 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:44,101 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:45:44,117 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:45:45,227 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:45:45,895 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:46:47,138 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 16:46:47,338 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:46:47,380 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:47:24,825 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:47:24,866 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 16:47:50,983 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:47:50,991 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:47:52,634 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 16:47:53,297 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 16:47:54,713 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:55:32,525 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 16:55:32,711 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 16:55:32,748 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 16:56:23,530 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:56:23,558 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 16:57:37,169 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 16:59:05,029 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:42,643 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:43,778 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:53,874 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:55,364 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:58,317 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:01:58,345 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:02:00,177 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 17:02:01,566 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 17:04:05,568 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:04:05,753 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:04:05,793 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:04:28,299 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:04:28,362 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 17:04:42,353 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:04:42,355 | INFO    | storage.repository | 创建任务 #22: 交作业
+2026-10-16 17:04:44,086 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:07:05,986 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:07:06,192 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:07:06,237 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:07:25,532 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:07:25,556 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 17:07:39,849 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:07:41,135 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:08:00,993 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:08:11,334 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:08:13,004 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 17:08:13,675 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 17:08:15,794 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:08:40,600 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:08:48,218 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:09:39,522 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:10:12,763 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:10:23,848 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:13:59,246 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:13:59,448 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:13:59,502 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:15:25,429 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:15:25,474 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 17:15:26,469 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:15:28,412 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 17:15:29,073 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-17&end_date=2026-10-17 "HTTP/1.1 200 OK"
+2026-10-16 17:15:30,443 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:15:45,951 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:16:08,067 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:16:31,924 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:18:54,337 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:18:54,559 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:18:54,600 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:20:26,169 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:20:26,369 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:20:26,410 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:21:08,324 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:21:08,398 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 17:21:50,121 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:22:13,626 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:22:49,405 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:23:19,471 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:23:31,950 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:23:31,953 | INFO    | storage.repository | 创建任务 #23: 交作业
+2026-10-16 17:23:32,900 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:32:58,046 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-16 17:32:58,240 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-16 17:32:58,280 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-16 17:39:04,792 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:39:04,827 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-16 17:39:23,592 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:20,045 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:20,064 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:21,949 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%8C%97%E4%BA%AC&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 17:48:22,641 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=39.9075&longitude=116.39723&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-16&end_date=2026-10-16 "HTTP/1.1 200 OK"
+2026-10-16 17:48:31,497 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:33,241 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:45,792 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:51,075 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:54,925 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:48:58,972 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:03,054 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:07,348 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:11,593 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:16,390 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:20,909 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:24,839 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:29,304 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 17:49:33,391 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 18:40:41,585 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 18:40:57,926 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-16 18:40:59,242 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%B9%BF%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-16 18:41:00,960 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=23.11667&longitude=113.25&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-17&end_date=2026-10-17 "HTTP/1.1 200 OK"
+2026-10-16 18:41:01,990 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 13:33:33,081 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-18 13:33:33,290 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-18 13:33:33,333 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-18 13:37:43,309 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 13:37:43,347 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-18 13:37:59,599 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 13:37:59,617 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 13:38:01,674 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%B9%BF%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 13:38:03,399 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=23.11667&longitude=113.25&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 14:13:49,772 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 14:13:49,777 | INFO    | storage.repository | 创建任务 #24: 去上课
+2026-10-18 14:13:52,002 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:24:50,098 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:02,415 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:03,566 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:05,106 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:30,910 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:30,919 | INFO    | storage.repository | 创建任务 #25: 交报告
+2026-10-18 15:26:30,920 | INFO    | storage.repository | 创建任务 #26: 做实验
+2026-10-18 15:26:34,019 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:41,552 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:50,456 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:50,476 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:26:51,900 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E5%B9%BF%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:26:52,807 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=23.11667&longitude=113.25&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:27:07,092 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:27:07,112 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:27:08,282 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:27:11,064 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:27:13,963 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:29:35,935 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:29:37,002 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:29:41,931 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:29:43,025 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:29:43,778 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:29:45,541 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:32:15,135 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:32:15,158 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:32:16,321 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:32:17,075 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:54:18,131 | INFO    | __main__ | 已加载环境变量文件: D:\projects\software_engineering\homework3\.env
+2026-10-18 15:54:18,364 | INFO    | __main__ | todo-assistant MCP Server 启动（stdio），工作目录: D:\projects\software_engineering\homework3
+2026-10-18 15:54:18,408 | INFO    | mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+2026-10-18 15:54:19,142 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:54:19,259 | INFO    | storage.db | SQLite 已就绪: D:\projects\software_engineering\homework3\.data\todo.db
+2026-10-18 15:54:20,897 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:54:21,598 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:54:21,618 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:54:22,778 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.2741&longitude=120.1551&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:54:44,984 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:54:55,133 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:54:56,158 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:54:57,886 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:55:13,887 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:55:14,850 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.2741&longitude=120.1551&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:55:19,425 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:55:20,551 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:55:21,479 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:55:37,170 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:55:46,233 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:55:47,286 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E4%B8%8A%E6%B5%B7&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:55:48,264 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:56:04,545 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:56:13,611 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:56:14,775 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:56:15,561 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:56:33,335 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:56:42,411 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:56:43,708 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:56:44,421 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:57:25,332 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:57:34,358 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:57:35,433 | INFO    | httpx | HTTP Request: GET https://geocoding-api.open-meteo.com/v1/search?name=%E6%9D%AD%E5%B7%9E&count=1&language=zh&format=json "HTTP/1.1 200 OK"
+2026-10-18 15:57:36,112 | INFO    | httpx | HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=30.29365&longitude=120.16142&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&start_date=2026-10-18&end_date=2026-10-18 "HTTP/1.1 200 OK"
+2026-10-18 15:57:50,443 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:58:11,528 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest
+2026-10-18 15:58:14,605 | INFO    | mcp.server.lowlevel.server | Processing request of type CallToolRequest

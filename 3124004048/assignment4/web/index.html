@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>待办小助理 · Todo Assistant</title>
+<meta name="description" content="基于 MCP + DeepSeek 的任务管理智能体：自然语言对话、自动排优先级、生成日程、调用天气 API" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✅</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css?v=__ASSET_VERSION__" />
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- ================= 侧边导航 ================= -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">✓</div>
+      <div class="brand-text">
+        <strong>待办小助理</strong>
+        <span>Todo Assistant</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item is-active" data-view="chat">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.8-.8L3 21l1.9-5A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg>
+        <span>对话工作台</span>
+      </button>
+      <button class="nav-item" data-view="today">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 3v3M16 3v3M3 10h18"/></svg>
+        <span>今日计划</span>
+      </button>
+      <button class="nav-item" data-view="tasks">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1.2 1.2L7 5.5M4 12l1.2 1.2L7 11.5M4 18l1.2 1.2L7 17.5"/></svg>
+        <span>任务总览</span>
+      </button>
+      <button class="nav-item" data-view="settings">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 3.1 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.2-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 10 4.6a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.7 1.7 0 0 0 20.9 11a2 2 0 1 1 0 4Z"/></svg>
+        <span>设置与关于</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="conn" id="conn">
+        <i class="status-dot"></i>
+        <span id="conn-text">连接中…</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= 主内容区 ================= -->
+  <div class="main">
+
+    <header class="topbar">
+      <button class="icon-btn" id="nav-toggle" title="菜单" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="topbar-title">
+        <h2 id="view-title">对话工作台</h2>
+        <p id="view-sub">用一句话说出你想做什么，我来帮你落地</p>
+      </div>
+      <div class="topbar-actions">
+        <span class="badge" id="session-badge" title="当前会话 ID">会话 —</span>
+        <button class="icon-btn" id="new-session" title="开启新会话">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button class="icon-btn" id="refresh" title="刷新数据">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg>
+        </button>
+        <button class="icon-btn" id="theme-toggle" title="切换主题">
+          <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="views">
+
+      <!-- ============ 视图 1：对话工作台 ============ -->
+      <section class="view is-active" id="view-chat">
+        <div class="chat-layout">
+
+          <aside class="chat-aside">
+            <div class="card progress-card">
+              <div class="ring">
+                <svg width="78" height="78" viewBox="0 0 78 78">
+                  <defs>
+                    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#6366f1" />
+                      <stop offset="55%" stop-color="#8b5cf6" />
+                      <stop offset="100%" stop-color="#06b6d4" />
+                    </linearGradient>
+                  </defs>
+                  <circle class="track" cx="39" cy="39" r="32" />
+                  <circle class="value" id="ring-value" cx="39" cy="39" r="32"
+                          stroke-dasharray="201" stroke-dashoffset="201" />
+                </svg>
+                <div class="ring-text" id="ring-text">0%</div>
+              </div>
+              <div class="progress-meta">
+                <strong id="today-done">0/0</strong>
+                <span>今日完成</span>
+                <span class="faint" id="overdue-hint">暂无逾期</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h3>今日待办</h3>
+                <span class="badge spacer" id="today-count">0</span>
+              </div>
+              <ul class="mini-list" id="mini-list">
+                <li class="empty"><strong>暂无待办</strong>在右侧告诉我你想做什么</li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="chat-main">
+            <div class="messages" id="messages">
+              <div class="msg msg-assistant">
+                <div class="msg-avatar">✓</div>
+                <div>
+                  <div class="msg-bubble">
+                    <strong>你好，我是待办小助理 👋</strong>
+                    <p>我能听懂自然语言，也能真正动手做事情：创建/修改任务、排优先级、生成时间轴日程、查天气、导出清单文件。</p>
+                    <p class="muted" style="font-size:12.5px">试试下面的快捷指令，或者直接说「明天下午3点前提交作业，这个最重要」。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="composer">
+              <div class="voice-bar">
+                <button type="button" class="hints-toggle" id="voice-hints-toggle" aria-expanded="false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  <span>语音指令参考</span>
+                </button>
+                <button type="button" class="switch" id="voice-autoreplay" aria-pressed="false"
+                        title="开启后每次录音结束会立刻回放一遍你刚说的话，方便确认录进去的声音">
+                  <span class="switch-track"><span class="switch-knob"></span></span>
+                  <span class="switch-label">录音后回放</span>
+                </button>
+                <button type="button" class="switch" id="voice-autoread" aria-pressed="false" title="开启后助理每次回复都会朗读">
+                  <span class="switch-track"><span class="switch-knob"></span></span>
+                  <span class="switch-label">自动朗读</span>
+                </button>
+                <button type="button" class="hints-toggle" id="voice-replay" hidden
+                        title="回放你刚才的录音，确认录进去的声音是否正常">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l15-9-15-9Z"/></svg>
+                  <span>回放录音</span>
+                </button>
+                <span class="voice-note" id="voice-note" hidden></span>
+              </div>
+
+              <div class="voice-hints" id="voice-hints-panel" hidden></div>
+
+              <div class="chips" id="chips">
+                <button class="chip" data-prompt="今天我先做哪个？帮我排个日程">今日计划</button>
+                <button class="chip" data-prompt="早上好，今天有什么安排？">每日简报</button>
+                <button class="chip" data-prompt="把今天的待办清单导出成文件">导出清单</button>
+                <button class="chip" data-action="weather" title="直接查询天气：优先用你的偏好城市，没有则询问浏览器定位">查天气</button>
+                <button class="chip" data-prompt="我还有多少任务没做完？有没有逾期的？">任务统计</button>
+              </div>
+
+              <div class="composer-box">
+                <button type="button" class="mic-btn" id="voice-mic" hidden
+                        aria-pressed="false" aria-label="点击开始说话" title="点击开始说话">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="2" width="6" height="12" rx="3"/>
+                    <path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4"/><path d="M8 22h8"/>
+                  </svg>
+                </button>
+                <span class="mic-timer" id="voice-timer" hidden>0:00</span>
+                <textarea id="input" rows="1" placeholder="用一句话说出你想做什么…（Enter 发送，Shift+Enter 换行；Ctrl+Shift+M 语音输入）"></textarea>
+                <button class="send-btn" id="send" title="发送">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+                </button>
+              </div>
+              <p class="mic-fallback" id="voice-mic-fallback" hidden></p>
+              <span class="sr-only" id="voice-live" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ 视图 2：今日计划 ============ -->
+      <section class="view" id="view-today">
+        <div class="today-layout">
+          <div class="card day-head">
+            <div class="date-nav">
+              <button class="icon-btn" id="day-prev" title="前一天">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="icon-btn" id="day-next" title="后一天">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+            <div>
+              <h3 id="day-title">今天</h3>
+              <p class="muted" id="day-sub" style="margin:0;font-size:12.5px">—</p>
+            </div>
+            <div class="spacer" style="margin-left:auto;display:flex;gap:8px">
+              <button class="btn" id="day-today">回到今天</button>
+              <button class="btn btn-primary" id="day-replan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg>
+                重新规划
+              </button>
+            </div>
+          </div>
+
+          <div class="card weather-card" id="weather-card">
+            <div class="weather-main">
+              <div class="weather-icon" id="weather-icon">🌤️</div>
+              <div>
+                <div class="weather-temp" id="weather-temp">--<small>°C</small></div>
+                <div class="muted" id="weather-desc" style="font-size:12.5px">正在获取天气…</div>
+              </div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div class="weather-meta" id="weather-meta"></div>
+              <div class="advice" id="weather-advice">—</div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-head">
+                <h3>时间轴日程</h3>
+                <span class="badge spacer" id="plan-badge">—</span>
+              </div>
+              <div class="timeline" id="timeline">
+                <div class="empty"><strong>还没有日程</strong>点右上角「重新规划」生成时间轴</div>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:18px">
+              <div class="card">
+                <div class="card-head"><h3>可用时间</h3></div>
+                <div class="capacity-row">
+                  <span id="capacity-label">—</span>
+                  <span id="capacity-value">0%</span>
+                </div>
+                <div class="capacity-bar"><div class="capacity-fill" id="capacity-fill" style="width:0%"></div></div>
+                <p class="faint" id="capacity-note" style="margin:10px 0 0;font-size:12px">—</p>
+              </div>
+
+              <div class="card">
+                <div class="card-head">
+                  <h3>逾期与提醒</h3>
+                  <span class="badge spacer" id="overdue-count">0</span>
+                </div>
+                <div id="overdue-list">
+                  <div class="empty" style="padding:18px">没有逾期任务 🎉</div>
+                </div>
+              </div>
+
+              <div class="card" id="unscheduled-card" style="display:none">
+                <div class="card-head"><h3>无法排入</h3></div>
+                <div id="unscheduled-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 视图 3：任务总览 ============ -->
+      <section class="view" id="view-tasks">
+        <div class="tasks-layout">
+          <div class="summary-strip" id="summary-strip"></div>
+
+          <div class="card">
+            <div class="filter-bar">
+              <div class="field">
+                <label for="f-status">状态</label>
+                <select class="select" id="f-status">
+                  <option value="open">未完成</option>
+                  <option value="todo">待办</option>
+                  <option value="doing">进行中</option>
+                  <option value="done">已完成</option>
+                  <option value="all">全部</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-priority">优先级</label>
+                <select class="select" id="f-priority">
+                  <option value="">全部</option>
+                  <option value="high">高</option>
+                  <option value="medium">中</option>
+                  <option value="low">低</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-keyword">搜索</label>
+                <input class="input" id="f-keyword" placeholder="标题或备注关键词" />
+              </div>
+              <div class="field">
+                <label for="f-tag">标签</label>
+                <input class="input" id="f-tag" placeholder="如：学习" style="width:110px" />
+              </div>
+              <div class="field">
+                <label><input type="checkbox" id="f-overdue" /> 只看逾期</label>
+              </div>
+              <div class="spacer" style="margin-left:auto;display:flex;gap:8px;align-items:center">
+                <div class="viewtoggle" id="view-toggle">
+                  <button class="is-active" data-layout="list">列表</button>
+                  <button data-layout="board">看板</button>
+                </div>
+                <button class="btn btn-primary" id="add-task">新建任务</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="task-container">
+            <div class="task-list" id="task-list"></div>
+            <div class="board" id="task-board" style="display:none"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 视图 4：设置与关于 ============ -->
+      <section class="view" id="view-settings">
+        <div class="settings-layout">
+
+          <div class="card">
+            <div class="card-head"><h3>运行环境</h3></div>
+            <div class="meta-grid" id="meta-grid"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>加分项实现情况</h3></div>
+            <div class="feature-list">
+              <div class="feature">
+                <b><span class="ok">●</span> 多轮对话记忆</b>
+                <p>短期窗口保留最近对话原文，更早的对话自动压缩成摘要持久化到 SQLite；用户偏好跨会话生效。</p>
+              </div>
+              <div class="feature">
+                <b><span class="ok">●</span> 数据库交互</b>
+                <p>SQLite 三组表：<code>tasks</code> / <code>sessions+messages</code> / <code>preferences</code>，含状态与时间索引。</p>
+              </div>
+              <div class="feature">
+                <b><span class="ok">●</span> 外部 API 调用</b>
+                <p>Open-Meteo 天气服务（地理编码 + 预报），无需 API Key，失败自动降级为可读提示。</p>
+              </div>
+              <div class="feature">
+                <b><span class="ok">●</span> 前端界面</b>
+                <p>FastAPI + 原生 HTML/CSS/JS，SSE 流式对话，工具调用过程实时可视化。</p>
+              </div>
+              <div class="feature">
+                <b><span class="ok">●</span> 语音输入 / 输出</b>
+                <p>麦克风说话即可下达指令，助理回复可一键朗读或自动播报；使用 Windows SAPI 引擎，<strong>完全离线、零密钥、零模型下载</strong>。</p>
+              </div>
+              <div class="feature">
+                <b><span class="ok">●</span> MCP 框架</b>
+                <p>官方 MCP Python SDK 独立 stdio Server，可被任意 MCP 客户端复用。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3>MCP 工具能力清单</h3>
+              <span class="badge spacer" id="tool-count">0</span>
+            </div>
+            <div class="table-wrap">
+              <table class="tool-table">
+                <thead>
+                  <tr><th style="width:34px">#</th><th style="width:210px">工具</th><th>作用</th><th style="width:260px">参数</th></tr>
+                </thead>
+                <tbody id="tool-rows">
+                  <tr><td colspan="4" class="muted">加载中…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" id="voice-card">
+            <div class="card-head">
+              <h3>语音输入 / 输出</h3>
+              <span class="badge spacer" id="voice-engine-badge">检测中…</span>
+            </div>
+            <div class="meta-grid" id="voice-meta">
+              <div class="kv"><span>状态</span><strong>正在检测本机语音引擎…</strong></div>
+            </div>
+            <div class="voice-actions">
+              <button class="btn" id="voice-test">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+                试听合成效果
+              </button>
+              <span class="faint">语音完全离线运行，不需要任何密钥；识别模型一次性下载后即可断网使用，未安装时自动回退系统自带引擎。</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>已记住的用户偏好（长期记忆）</h3></div>
+            <div class="pref-list" id="pref-list"><span class="muted">暂无偏好记录</span></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>数据与主题</h3></div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px">
+              <button class="btn" id="set-theme">切换深色 / 浅色</button>
+              <button class="btn" id="export-checklist">让 Agent 导出今日清单</button>
+              <button class="btn btn-danger" id="clear-session">清空当前会话记忆</button>
+            </div>
+            <p class="faint" style="margin-top:12px;font-size:12px">
+              清单导出文件默认写入项目 <code>exports/</code> 目录；数据库位于 <code>.data/todo.db</code>，
+              删除该文件即可重置全部任务。
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="statusbar">
+      <span class="item"><i class="status-dot"></i> <span id="sb-status">初始化中</span></span>
+      <span class="item hide-sm">模型 <code id="sb-model">—</code></span>
+      <span class="item hide-sm">MCP 工具 <code id="sb-tools">0</code></span>
+      <span class="item spacer hide-sm" id="sb-time">—</span>
+    </footer>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toast-wrap"></div>
+
+<script src="/app.js?v=__ASSET_VERSION__"></script>
+<script src="/voice.js?v=__ASSET_VERSION__"></script>
+</body>
+</html>
